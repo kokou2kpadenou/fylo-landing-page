@@ -1,0 +1,57 @@
+@mixin bg-section($height, $top, $bottom, $image) {
+  height: $height;
+  bottom: $bottom;
+  top: $top;
+  background-image: url($image);
+}
+
+@mixin transition($property) {
+  -webkit-transition: $property;
+  transition: $property;
+}
+
+@mixin transform($property) {
+  -webkit-transform: $property;
+  transform: $property;
+}
+
+@mixin filter($property) {
+  -webkit-filter: $property;
+  filter: $property;
+}
+
+@mixin border-radius($property) {
+  -webkit-border-radius: $property;
+  border-radius: $property;
+}
+
+@mixin box-shadow($property...) {
+  -moz-box-shadow: $property;
+  -webkit-box-shadow: $property;
+  box-shadow: $property;
+}
+
+
+@mixin responsive ($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 37.5em) {
+      @content
+    };
+  }
+  @if $breakpoint == table-port {
+    @media only screen and (max-width: 56.25em) {
+      @content
+    };
+  }
+  @if $breakpoint == table-land {
+    @media only creen and (max-width: 75em) {
+      @content
+    };
+  }
+  @if $breakpoint == big-desktop {
+    @media only screen and (min-width: 112.5em) {
+      @content
+    };
+  }
+
+}
