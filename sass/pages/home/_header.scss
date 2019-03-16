@@ -1,0 +1,16 @@
+// Logo and navigation on the top of the page
+.header {
+  grid-column: ml-end / mr-start;
+  grid-row: header-start / header-end;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+  padding: 3rem 0;
+
+  &__img {
+    width: 14rem;
+    height: 5rem;
+  }
+
+}

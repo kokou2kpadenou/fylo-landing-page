@@ -1,0 +1,37 @@
+// testimonials section
+.testimonials {
+  grid-column: ml-end / mr-start;
+  font-size: 1.5rem;
+  margin: 20rem 0;
+  &__tiles {
+    display: grid;
+    grid-gap: 4rem;
+    justify-content: center;
+  }
+  &__tile {
+    padding: 2rem;
+    margin: 0 4rem;
+    background-color: $color-primary-dark-blue-4;
+    border-radius: .5rem;
+    box-shadow: 1rem 1rem 1rem 2px $color-shadow-lite-black;
+
+    & > * {
+      margin-top: 2rem;
+    }
+
+    &:first-of-type {
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        top: -4rem;
+        width: 5rem;
+        height: 4rem;
+        background-image:  url(../images/bg-quotes.png);
+        background-position: center;
+        background-size: cover;
+      }
+    }
+
+  }
+}

@@ -1,0 +1,65 @@
+// Footer section
+.footer {
+  grid-column: ml-end / mr-start;
+  grid-row: footer-start / footer-end;
+  padding-left: 3rem;
+  margin-top: 5rem;
+
+  &__img {
+    margin: 4rem 0;
+    &__content {
+      width: 140px;
+      height: 50px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__elt {
+      display: flex;
+      margin-bottom: 8rem;
+      flex: 1 1 100%;
+      &--1 {
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      &--2 {
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      &--3 {
+        justify-content: center;
+      }
+
+      &__contact {
+        flex: 1 1 100%;
+      }
+
+      &__menu {
+        list-style: none;
+        flex: 1 1 100%;
+        &:not(:last-of-type) {
+          margin-bottom: 6rem;
+        }
+        & li {
+          padding-bottom: 16px;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  &__attribution {
+    padding-bottom: 4rem;
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+      a:link, a:visited { color: $color-attribution-link; }
+      a:hover, a:active { color: $color-neutral-white; }
+    }
+  }
+}

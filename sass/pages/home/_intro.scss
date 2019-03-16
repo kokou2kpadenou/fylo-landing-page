@@ -1,0 +1,43 @@
+// intro section
+.intro {
+  grid-column: signup-c-start / signup-c-end;
+  grid-row: intro-start / intro-end;
+  text-align: center;
+
+  &__down {
+    margin: 4rem 2rem 0 2rem;
+    & > :not(:last-child) {
+      padding-bottom: 4rem;
+    }
+  }
+
+  &__background {
+    grid-column: ml-start / mr-end;
+    grid-row: intro-bg-start / intro-bg-end;
+    background-image: url(../images/bg-curvy-mobile.svg);
+    background-color: $color-primary-dark-blue-1;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -1; // Push element to the back.
+  }
+
+  &__img {
+    width: 85%;
+  }
+
+  &__btn {
+    display: grid;
+    & a {
+      display: grid;
+      align-items: center;
+      width: 32rem;
+      justify-self: center;
+    }
+  }
+
+  & p {
+    max-width: 60rem;
+    margin: 0 auto;
+  }
+}

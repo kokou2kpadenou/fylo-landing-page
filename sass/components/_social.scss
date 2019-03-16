@@ -1,0 +1,50 @@
+// social link styling
+.social {
+  display: flex;
+  list-style: none;
+
+  &__elt {
+    &:not(:last-of-type) {
+      margin-right: .6em;
+    }
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    padding: .6em;
+
+    &:link, &:visited {
+      border: 1px solid $color-neutral-white;
+      color: $color-neutral-white;
+      transition: all .5s;
+    }
+
+    &--facebook, &--twitter, &--instagram {
+      &:hover, &:active {
+        border: 1px solid $color-facebook;
+        color: $color-facebook;
+      }
+    }
+    &--twitter {
+      &:hover, &:active {
+        border: 1px solid $color-twitter;
+        color: $color-twitter;
+      }
+    }
+    &--instagram {
+      &:hover, &:active {
+        border: 1px solid $color-instagram;
+        color: $color-instagram;
+      }
+    }
+  }
+
+  &__img {
+    width: 1em;
+    height: 1em;
+    fill: currentcolor;
+  }
+}

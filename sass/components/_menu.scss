@@ -1,0 +1,30 @@
+// navigation menu styling
+.menu {
+  font-family: $font-family-heading;
+  font-size: 1.6rem;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+  grid-gap: 3rem;
+  justify-items: right;
+
+  &__link {
+    position: relative;
+    display: inline-block;
+    &::after {
+      content: '';
+      position: absolute;
+      top: 120%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 2px;
+      background-color: $color-accent-blue;
+      background-image: $gradient-call-to-action;
+      transition: all .5s;
+    }
+    &:hover::after {
+      width: 120%;
+    }
+  }
+}

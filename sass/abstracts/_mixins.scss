@@ -1,38 +1,13 @@
-@mixin bg-section($height, $top, $bottom, $image) {
-  height: $height;
-  bottom: $bottom;
-  top: $top;
-  background-image: url($image);
+// Text color as gradient
+@mixin text-color-gradient() {
+  background-image: $gradient-call-to-action;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
-@mixin transition($property) {
-  -webkit-transition: $property;
-  transition: $property;
-}
-
-@mixin transform($property) {
-  -webkit-transform: $property;
-  transform: $property;
-}
-
-@mixin filter($property) {
-  -webkit-filter: $property;
-  filter: $property;
-}
-
-@mixin border-radius($property) {
-  -webkit-border-radius: $property;
-  border-radius: $property;
-}
-
-@mixin box-shadow($property...) {
-  -moz-box-shadow: $property;
-  -webkit-box-shadow: $property;
-  box-shadow: $property;
-}
-
-
-@mixin responsive ($breakpoint) {
+// Different breack points
+@mixin responsive($breakpoint) {
   @if $breakpoint == phone {
     @media only screen and (max-width: 37.5em) {
       @content

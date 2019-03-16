@@ -1,0 +1,23 @@
+// fylo's logo styling
+.logo {
+  fill: $color-neutral-white;
+
+  &:hover {
+    fill: url(#gradient-call-to-action);
+    & .logo__top {
+      transform: translateY(-5px);
+    }
+
+    & .logo__bottom {
+      transform: translateY(5px);
+    }
+  }
+
+  &__top {
+    transition: transform .9s;
+  }
+
+  &__bottom {
+    transition: transform .3s;
+  }
+}

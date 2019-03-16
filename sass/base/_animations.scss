@@ -1,0 +1,29 @@
+// Change the color link to linear gradient color
+.link__animation {
+  &:link, &:visited {
+    text-decoration: none;
+    color: $color-neutral-white;
+  }
+  &:hover, &:active {
+    @include text-color-gradient();
+  }
+
+  &:hover svg, &:active svg{
+    fill: url(#gradient-call-to-action);
+  }
+}
+
+// Animate the fylo's logo when the mouse hover the menu
+nav {
+  &:hover + div .logo {
+    fill: url(#gradient-call-to-action);
+  }
+
+  &:hover + div .logo .logo__top {
+    transform: translateY(-5px);
+  }
+
+  &:hover + div .logo__bottom {
+    transform: translateY(5px);
+  }
+}

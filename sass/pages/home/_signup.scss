@@ -1,0 +1,38 @@
+// sign up section
+.signup {
+  grid-column: signup-c-start / signup-c-end;
+  grid-row: signup-r-start / signup-r-end;
+  background-color: $color-primary-dark-blue-1;
+  padding: 4em .4em 2em .4em;
+  text-align: center;
+  border-radius: 1rem;
+  box-shadow: 1rem 1rem 1rem 2px $color-shadow-lite-black;
+
+  & p {
+    max-width: 48em;
+    margin: 0 auto;
+    padding: 0 14px;
+  }
+
+  &__container {
+    max-width: 54em;
+    margin: 0 auto;
+    & > *:not(:last-child){
+      padding-bottom: 3rem;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-wrap: wrap;
+    &__input {
+      margin: 14px;
+      &--email {
+        flex: 3 1 27.5em;
+      }
+      &--submit {
+        flex: 1 1 10em;
+      }
+    }
+  }
+}

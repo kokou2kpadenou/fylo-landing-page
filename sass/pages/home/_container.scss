@@ -1,0 +1,34 @@
+// The overall layout of the site
+// To understand consult description.md
+
+// ml-start: margin left start
+// ml-start: margin left end
+// mr-start: margin right start
+// mr-start: margin right end
+// signup-c-start / signup-c-end: space cover by sign up area horizontally
+// signup-r-start / signup-c-end: space cover by sign up area vertically
+
+.container {
+  display: grid;
+  grid-template-columns: [ml-start] 5vw [ml-end] 1fr [signup-c-start] minmax(min-content, 60em) [signup-c-end] 1fr [mr-start] 5vw [mr-end];
+  grid-template-rows: [header-start] auto [header-end intro-start intro-bg-start] 78vw [intro-bg-end] auto [intro-end] repeat(3, auto) [signup-r-start] auto [footer-bg-start] auto [signup-r-end footer-start] auto [footer-end footer-bg-end];
+
+
+  // Header background
+  &::before {
+    content: "";
+    grid-column: ml-start / mr-end;
+    grid-row: header-start / header-end;
+    background-color: $color-primary-dark-blue-1;
+    z-index: -1; // Push element to the back.
+  }
+
+  // Footer background and half side background of sign up
+  &::after {
+    content: "";
+    grid-column: ml-start / mr-end;
+    grid-row: footer-bg-start / footer-bg-end;
+    background-color: $color-primary-dark-blue-3;
+    z-index: -1; // Push element to the back.
+  }
+}

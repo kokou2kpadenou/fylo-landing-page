@@ -1,0 +1,35 @@
+body {
+  font-size: 2rem;
+  font-family: $font-family-body;
+  background-color: $color-primary-dark-blue-2;
+  color: $color-neutral-white;
+}
+
+.heading {
+  font-family: $font-family-heading;
+  font-weight: 700;
+  &--1 {
+    font-size: 3rem;
+    line-height: 4rem;
+  }
+
+  &--2 {
+    font-size: 2.6rem;
+  }
+
+  &--3 {
+    font-size: 2.5rem;
+  }
+
+  &--4 {
+    font-size: 2.5rem;
+  }
+}
+
+.normal-paragraph {
+  line-height: 22px;
+}
+
+.small-paragraph {
+  line-height: 18px;
+}

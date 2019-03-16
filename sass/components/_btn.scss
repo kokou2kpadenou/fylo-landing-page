@@ -1,0 +1,28 @@
+// Button styling
+.btn {
+  font-family: $font-family-heading;
+  font-weight: bold;
+  color: $color-neutral-white;
+  text-decoration: none;
+  background-color: $color-accent-blue;
+  background-image: $gradient-call-to-action;
+  height: 6rem;
+  border-radius: 100rem;
+  border: 2px solid $color-accent-blue;
+  outline: none;
+  cursor: pointer;
+  transition: all .5s;
+
+  &:hover {
+    @include text-color-gradient();
+    transform: translateY(-6px);
+    box-shadow: 1rem 1rem 1rem 2px $color-shadow-lite-black;
+  }
+
+  &:active {
+    @include text-color-gradient();
+    transform: translateY(-3px);
+    box-shadow: .5rem .5rem .5rem 1px $color-shadow-lite-black;
+  }
+
+}

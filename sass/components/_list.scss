@@ -1,0 +1,17 @@
+// Footer (list) icon and text styling
+.list {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  margin-bottom: 16px;
+
+  &__icone {
+   width: 20px;
+   height: 20px;
+   margin-top: 5px;
+   fill: $color-neutral-white;
+  }
+
+  &__label {
+   line-height: 24px;
+  }
+}

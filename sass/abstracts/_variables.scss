@@ -1,11 +1,24 @@
 // Colors
-$color-primary-dark-blue-1: hsl(217, 28%, 15%); //intro and email sign up background
-$color-primary-dark-blue-2: hsl(218, 28%, 13%); //main background
-$color-primary-dark-blue-3: hsl(216, 53%, 9%); //footer background
-$color-primary-dark-blue-4: hsl(219, 30%, 18%); //testimonials background
+$color-primary-dark-blue-1: hsl(217, 28%, 15%); // intro and email sign up background
+$color-primary-dark-blue-2: hsl(218, 28%, 13%); // main background
+$color-primary-dark-blue-3: hsl(216, 53%, 9%); // footer background
+$color-primary-dark-blue-4: hsl(219, 30%, 18%); // testimonials background
 
 
-$color-accent-cyan: hsl(176, 68%, 64%) //inside call-to-action gradient
-$color-accent-blue: hsl(198, 60%, 50%) //inside call-to-action gradient
+$color-accent-cyan: hsl(176, 68%, 64%); // inside call-to-action gradient
+$color-accent-blue: hsl(198, 60%, 50%); // inside call-to-action gradient
+$gradient-call-to-action: linear-gradient(to right, $color-accent-cyan, $color-accent-blue);
 
-$color-neutral-white: hsl(0, 0%, 100%) //white color
+$color-neutral-white: hsl(0, 0%, 100%); // white color
+
+$color-shadow-lite-black: rgba(0, 0, 0, 0.5); // shadow
+
+$color-facebook: hsl(221, 44%, 41%); // facebook color
+$color-twitter: hsl(206, 82%, 63%); // twitter color
+$color-instagram: hsl(207, 34%, 48%); // instagram color
+
+$color-attribution-link: hsl(228, 45%, 44%); // attribution anchor color
+
+
+$font-family-heading: 'Raleway', sans-serif; // Headings, Call-to-actions, Header Navigation - font
+$font-family-body: 'Open Sans', sans-serif; // Body - font
