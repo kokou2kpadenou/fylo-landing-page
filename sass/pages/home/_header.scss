@@ -6,11 +6,26 @@
   justify-content: space-between;
   align-items: center;
   flex-direction: row-reverse;
-  padding: 3rem 0;
+  padding: 5rem 0 2rem 0;
 
   &__img {
     width: 14rem;
     height: 5rem;
+
+    @include responsive(tablet-port) {
+      width: 16rem;
+      height: 5.8rem;
+    };
+
+    @include responsive(tablet-land) {
+      width: 18rem;
+      height: 6.2rem;
+    };
+
+    @include responsive(desktop) {
+      width: 20rem;
+      height: 7.5rem;
+    };
   }
 
 }

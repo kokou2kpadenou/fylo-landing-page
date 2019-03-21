@@ -5,7 +5,12 @@
   grid-gap: 8rem;
   align-items: center;
   margin: 0 1rem;
+  max-width: 143rem;
 
+  justify-self: center;
+  @include responsive(tablet-land) {
+    grid-template-columns: repeat(2, 1fr);
+  };
   &__img {
     width: 100%;
   }
@@ -14,6 +19,10 @@
 
     &:last-of-type  > * {
       margin-bottom: 2rem;
+    }
+
+    h2 {
+      @include responsive(tablet-land) { max-width: 57rem; };
     }
   }
 

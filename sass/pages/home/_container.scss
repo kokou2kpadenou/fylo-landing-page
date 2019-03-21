@@ -10,9 +10,23 @@
 
 .container {
   display: grid;
-  grid-template-columns: [ml-start] 5vw [ml-end] 1fr [signup-c-start] minmax(min-content, 60em) [signup-c-end] 1fr [mr-start] 5vw [mr-end];
-  grid-template-rows: [header-start] auto [header-end intro-start intro-bg-start] 78vw [intro-bg-end] auto [intro-end] repeat(3, auto) [signup-r-start] auto [footer-bg-start] auto [signup-r-end footer-start] auto [footer-end footer-bg-end];
 
+  // Control intro background image height
+  --intro-bg-height: 78vw;
+  @include responsive(tablet-land) { --intro-bg-height: 104rem; };
+  @include responsive(desktop) { --intro-bg-height: 138rem; };
+
+  // Control the margin of the page on big screen (+1500px)
+  --p-margin: 5vw;
+  --p-padding: 1fr;
+  @include responsive(big-desktop) {
+    --p-margin: 1fr;
+    --p-padding: 41.5rem;
+  };
+
+  grid-template-columns: [ml-start] var(--p-margin) [ml-end] var(--p-padding) [signup-c-start] minmax(min-content, 110rem) [signup-c-end] var(--p-padding) [mr-start] var(--p-margin) [mr-end];
+
+  grid-template-rows: [header-start] auto [header-end intro-start intro-bg-start] var(--intro-bg-height) [intro-bg-end] auto [intro-end] repeat(3, auto) [signup-r-start] 22rem [footer-bg-start] auto [signup-r-end footer-start] auto [footer-end footer-bg-end];
 
   // Header background
   &::before {

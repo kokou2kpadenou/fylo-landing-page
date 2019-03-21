@@ -22,7 +22,7 @@
       transition: all .5s;
     }
 
-    &--facebook, &--twitter, &--instagram {
+    &--facebook {
       &:hover, &:active {
         border: 1px solid $color-facebook;
         color: $color-facebook;

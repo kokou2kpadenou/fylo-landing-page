@@ -2,14 +2,18 @@
 .footer {
   grid-column: ml-end / mr-start;
   grid-row: footer-start / footer-end;
-  padding-left: 3rem;
   margin-top: 5rem;
+
+  &__upper {
+    padding-left: 3rem;
+    @include responsive(desktop) { padding-left: 5rem; };
+  }
 
   &__img {
     margin: 4rem 0;
     &__content {
-      width: 140px;
-      height: 50px;
+      width: 20rem;
+      height: 7.5rem;
     }
   }
 
@@ -24,30 +28,53 @@
       &--1 {
         flex-wrap: wrap;
         justify-content: space-between;
+        @include responsive(tablet-port) {
+          flex: 4 1 95rem;
+        };
       }
 
       &--2 {
         flex-wrap: wrap;
         justify-content: space-between;
+        @include responsive(tablet-port) {
+          flex: 2 1 40rem;
+        };
       }
 
       &--3 {
         justify-content: center;
+        @include responsive(tablet-port) {
+          flex: 1 0 16rem;
+        };
       }
 
       &__contact {
         flex: 1 1 100%;
+
+        &--1 {
+          @include responsive(tablet-port) {
+            flex: 3 1 40rem;
+          };
+        }
+
+        &--2 {
+          @include responsive(tablet-port) {
+            flex: 2 1 20rem;
+          };
+        }
       }
 
       &__menu {
         list-style: none;
         flex: 1 1 100%;
-        &:not(:last-of-type) {
+        @include responsive(tablet-port) {
+          flex: 1 1 20rem;
+        };
+        &:first-of-type {
           margin-bottom: 6rem;
         }
         & li {
           padding-bottom: 16px;
-          font-size: 16px;
         }
       }
     }
@@ -58,7 +85,7 @@
     .attribution {
       font-size: 11px;
       text-align: center;
-      a:link, a:visited { color: $color-attribution-link; }
+      a:link, a:visited { @include text-color-gradient(); }
       a:hover, a:active { color: $color-neutral-white; }
     }
   }

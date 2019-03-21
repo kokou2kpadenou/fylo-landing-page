@@ -6,6 +6,18 @@
   display: grid;
   grid-template-columns: repeat(3, max-content);
   grid-gap: 3rem;
+  @include responsive(tablet-port) {
+    grid-gap: 5rem;
+
+  };
+  @include responsive(tablet-land) {
+    grid-gap: 6rem;
+
+  };
+
+  @include responsive(desktop) {
+    grid-gap: 8rem;
+  };
   justify-items: right;
 
   &__link {

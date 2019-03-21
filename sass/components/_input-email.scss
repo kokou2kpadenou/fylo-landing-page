@@ -5,16 +5,13 @@
   height: 6rem;
   padding: 0 4rem;
   outline: none;
-  position: relative;
 
   &:focus:invalid {
     border: 2px solid red;
-    background-image: none;
     box-shadow: 0 0 5px #d45252;
   }
 
   &:valid {
-    background-image: none;
     border-color: $color-accent-cyan;
   }
 

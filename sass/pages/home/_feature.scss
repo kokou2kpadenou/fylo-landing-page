@@ -4,13 +4,18 @@
   justify-self: center;
   display: grid;
   grid-gap: 4rem;
-  margin: 15rem 0;
+  grid-template-columns: repeat(auto-fill, minmax(38rem, 1fr));
+
+  margin: 20rem 0;
+  @include responsive(desktop) {
+    margin-top: 0;
+  }
 
   &__elt {
     text-align: center;
     padding: 2rem 1.5rem;
     display: grid;
-    grid-template-rows: 120px;
+    grid-template-rows: 100px;
 
     & h2 {
       padding-bottom: 2rem;
@@ -22,7 +27,7 @@
     align-self: center;
     &__content {
       width: 8rem;
-      margin: 4rem;
+      height: 8rem;
     }
   }
 }

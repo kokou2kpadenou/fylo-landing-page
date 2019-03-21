@@ -12,6 +12,8 @@
   }
 
   &__label {
-   line-height: 24px;
+   line-height: 4rem;
+   padding-right: 2rem;
+   @include responsive(tablet-port) {max-width: 43rem;};
   }
 }

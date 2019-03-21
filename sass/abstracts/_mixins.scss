@@ -8,23 +8,27 @@
 
 // Different breack points
 @mixin responsive($breakpoint) {
-  @if $breakpoint == phone {
-    @media only screen and (max-width: 37.5em) {
+  // 600px and plus (600px / 16px = 37.5em) ==> tablet portrait
+  @if $breakpoint == tablet-port {
+    @media only screen and (min-width: 37.5em) {
       @content
     };
   }
-  @if $breakpoint == table-port {
-    @media only screen and (max-width: 56.25em) {
+  // 900px and plus (900px / 16px = 56.25em) ==> tablet landscape
+  @if $breakpoint == tablet-land {
+    @media only screen and (min-width: 56.25em) {
       @content
     };
   }
-  @if $breakpoint == table-land {
-    @media only creen and (max-width: 75em) {
+  // 1200px and plus (1200px / 16px = 75em) ==> desktop
+  @if $breakpoint == desktop {
+    @media only screen and (min-width: 75em) {
       @content
     };
   }
+  // 1500px and plus (1500px / 16px = 93.75em) ==> big desktop
   @if $breakpoint == big-desktop {
-    @media only screen and (min-width: 112.5em) {
+    @media only screen and (min-width: 93.75em) {
       @content
     };
   }

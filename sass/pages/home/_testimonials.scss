@@ -2,21 +2,37 @@
 .testimonials {
   grid-column: ml-end / mr-start;
   font-size: 1.5rem;
-  margin: 20rem 0;
+  margin: 25rem 0;
+  max-width: 142rem;
+  justify-self: center;
+  @include responsive(tablet-land) {
+    font-size: 1.7rem;
+  };
+
   &__tiles {
     display: grid;
     grid-gap: 4rem;
     justify-content: center;
+    @include responsive(tablet-land) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 6rem;
+    };
   }
   &__tile {
     padding: 2rem;
+    @include responsive(tablet-port) {
+      padding: 2rem 4rem;
+    };
     margin: 0 4rem;
+    @include responsive(tablet-land) {
+      margin: 0;
+    };
     background-color: $color-primary-dark-blue-4;
     border-radius: .5rem;
     box-shadow: 1rem 1rem 1rem 2px $color-shadow-lite-black;
 
     & > * {
-      margin-top: 2rem;
+      margin-top: 2.5rem;
     }
 
     &:first-of-type {

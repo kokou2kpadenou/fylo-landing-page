@@ -15,6 +15,7 @@
     grid-column: ml-start / mr-end;
     grid-row: intro-bg-start / intro-bg-end;
     background-image: url(../images/bg-curvy-mobile.svg);
+    @include responsive(tablet-land) { background-image: url(../images/bg-curvy-desktop.svg); };
     background-color: $color-primary-dark-blue-1;
     background-position: bottom;
     background-repeat: no-repeat;
