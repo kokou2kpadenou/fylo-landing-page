@@ -14,13 +14,12 @@
   &__background {
     grid-column: ml-start / mr-end;
     grid-row: intro-bg-start / intro-bg-end;
-    background-image: url(../images/bg-curvy-mobile.svg);
-    @include responsive(tablet-land) { background-image: url(../images/bg-curvy-desktop.svg); };
-    background-color: $color-primary-dark-blue-1;
+    background-image: var(--bg-img-mobile);
+    @include responsive(tablet-land) { background-image: var(--bg-img-desktop); };
+    background-color: var(--color-primary-1);
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: contain;
-    z-index: -1; // Push element to the back.
   }
 
   &__img {

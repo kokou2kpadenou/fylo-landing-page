@@ -4,11 +4,11 @@
   font-weight: bold;
   color: $color-neutral-white;
   text-decoration: none;
-  background-color: $color-accent-blue;
-  background-image: $gradient-call-to-action;
+  background-color: var(--color-accent-dark);
+  background-image: var(--gradient);
   height: 6rem;
   border-radius: 100rem;
-  border: 2px solid $color-accent-blue;
+  border: 2px solid var(--color-accent-dark);
   outline: none;
   cursor: pointer;
   transition: all .5s;

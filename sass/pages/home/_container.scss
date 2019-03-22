@@ -10,7 +10,8 @@
 
 .container {
   display: grid;
-
+  background-color: var(--color-primary-2);
+  color: var(--color-neutral);
   // Control intro background image height
   --intro-bg-height: 78vw;
   @include responsive(tablet-land) { --intro-bg-height: 104rem; };
@@ -33,8 +34,7 @@
     content: "";
     grid-column: ml-start / mr-end;
     grid-row: header-start / header-end;
-    background-color: $color-primary-dark-blue-1;
-    z-index: -1; // Push element to the back.
+    background-color: var(--color-primary-1);
   }
 
   // Footer background and half side background of sign up
@@ -42,7 +42,6 @@
     content: "";
     grid-column: ml-start / mr-end;
     grid-row: footer-bg-start / footer-bg-end;
-    background-color: $color-primary-dark-blue-3;
-    z-index: -1; // Push element to the back.
+    background-color: var(--color-primary-3);
   }
 }

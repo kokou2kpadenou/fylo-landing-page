@@ -2,21 +2,21 @@
 .link__animation {
   &:link, &:visited {
     text-decoration: none;
-    color: $color-neutral-white;
+    color: var(--color-neutral);
   }
   &:hover, &:active {
     @include text-color-gradient();
   }
 
   &:hover svg, &:active svg{
-    fill: url(#gradient-call-to-action);
+    fill: var(--gradient-svg);
   }
 }
 
 // Animate the fylo's logo when the mouse hover the menu
 nav {
   &:hover + div .logo {
-    fill: url(#gradient-call-to-action);
+    fill: var(--gradient-svg);
   }
 
   &:hover + div .logo .logo__top {

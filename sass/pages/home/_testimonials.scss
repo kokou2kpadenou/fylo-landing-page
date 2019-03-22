@@ -27,7 +27,7 @@
     @include responsive(tablet-land) {
       margin: 0;
     };
-    background-color: $color-primary-dark-blue-4;
+    background-color: var(--color-primary-4);
     border-radius: .5rem;
     box-shadow: 1rem 1rem 1rem 2px $color-shadow-lite-black;
 

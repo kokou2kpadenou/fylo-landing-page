@@ -12,7 +12,8 @@
   }
 
   &:valid {
-    border-color: $color-accent-cyan;
+    border-color: var(--color-accent-light);
+    box-shadow: 0 0 5px var(--color-accent-light);
   }
 
 }

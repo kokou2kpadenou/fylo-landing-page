@@ -1,6 +1,6 @@
 // Text color as gradient
 @mixin text-color-gradient() {
-  background-image: $gradient-call-to-action;
+  background-image: var(--gradient);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;

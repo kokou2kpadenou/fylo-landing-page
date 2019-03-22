@@ -2,11 +2,11 @@
 .link-works {
 
   &:link, &:visited {
-    color: $color-accent-cyan;
+    color: var(--color-accent-light);
     font-family: $font-family-heading;
     font-size: 1.6rem;
     text-decoration: none;
-    border-bottom: 1px solid $color-accent-cyan;
+    border-bottom: 1px solid var(--color-accent-light);
     padding-bottom: .8rem;
   }
 

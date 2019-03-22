@@ -1,0 +1,21 @@
+.accent-svg {
+  &--fill {
+    fill: var(--color-accent-light);
+  }
+  &--stroke {
+    stroke: var(--color-accent-light);
+  }
+}
+
+.neutral-svg {
+  &--fill {
+    fill: var(--color-neutral);
+  }
+  &--stroke {
+    stroke: var(--color-neutral);
+  }
+}
+
+.bg-svg {
+  fill: var(--color-primary-2);
+}

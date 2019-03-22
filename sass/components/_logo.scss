@@ -1,9 +1,9 @@
 // fylo's logo styling
 .logo {
-  fill: $color-neutral-white;
+  fill: var(--color-neutral);
 
   &:hover {
-    fill: url(#gradient-call-to-action);
+    fill: var(--gradient-svg);
     & .logo__top {
       transform: translateY(-5px);
     }

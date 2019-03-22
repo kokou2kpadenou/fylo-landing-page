@@ -17,8 +17,8 @@
     padding: .6em;
 
     &:link, &:visited {
-      border: 1px solid $color-neutral-white;
-      color: $color-neutral-white;
+      border: 1px solid var(--color-neutral);
+      color: var(--color-neutral);
       transition: all .5s;
     }
 

@@ -4,12 +4,26 @@ $color-primary-dark-blue-2: hsl(218, 28%, 13%); // main background
 $color-primary-dark-blue-3: hsl(216, 53%, 9%); // footer background
 $color-primary-dark-blue-4: hsl(219, 30%, 18%); // testimonials background
 
+$color-neutral-white: hsl(0, 0%, 100%); // white color
 
 $color-accent-cyan: hsl(176, 68%, 64%); // inside call-to-action gradient
 $color-accent-blue: hsl(198, 60%, 50%); // inside call-to-action gradient
 $gradient-call-to-action: linear-gradient(to right, $color-accent-cyan, $color-accent-blue);
 
-$color-neutral-white: hsl(0, 0%, 100%); // white color
+$color-primary-light-white-1: hsl(0, 0%, 100%); // intro and email sign up background
+$color-primary-light-white-2: hsl(0, 0%, 91%); // main background
+$color-primary-light-white-3: hsl(0, 0%, 78%); // footer background
+$color-primary-light-white-4: hsl(0, 0%, 87%); // testimonials background
+
+$color-neutral-black: hsl(0, 0%, 20%); // black color
+// #2cd7cb
+$color-accent-cyan-d: hsl(0, 100%, 50%); // inside call-to-action gradient
+$color-accent-blue-d: hsl(198, 60%, 37%); // inside call-to-action gradient
+$gradient-call-to-action-d: linear-gradient(to right, $color-accent-cyan-d, $color-accent-blue-d);
+
+
+
+
 
 $color-shadow-lite-black: rgba(0, 0, 0, 0.5); // shadow
 
