@@ -27,3 +27,19 @@ nav {
     transform: translateY(5px);
   }
 }
+
+// Attribution's and signin link styling
+%extra-link-animation {
+  a {
+    transition: color .5s;
+    &:link,
+    &:visited {
+      @include text-color-gradient();
+      text-decoration: none;
+    }
+    &:hover,
+    &:active {
+      color: var(--color-neutral);
+    }
+  }
+}

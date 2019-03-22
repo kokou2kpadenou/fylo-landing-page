@@ -3,7 +3,6 @@
   &__content {
     font-size: 11px;
     text-align: center;
-    a:link, a:visited { @include text-color-gradient(); }
-    a:hover, a:active { color: var(--color-neutral); }
+    @extend %extra-link-animation;
   }
 }

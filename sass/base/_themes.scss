@@ -1,4 +1,5 @@
-.dark:checked ~ .container {
+.dark:checked ~ .container,
+.dark:checked ~ .popup {
   --color-primary-1: #{$color-primary-dark-blue-1};
   --color-primary-2: #{$color-primary-dark-blue-2};
   --color-primary-3: #{$color-primary-dark-blue-3};
@@ -11,6 +12,7 @@
   --gradient-svg: url(#gradient-call-to-action-1);
 
   --color-input-border: transparent;
+  --color-form-out-bg: rgba(255, 255, 255, .2);
 
   --bg-img-mobile: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='375' height='141'%3E%3Cpath d='M0 129c22.7-1.7 44-15.8 64-42.1 30-39.6 23.5-54.1 73.2-40.6C187 60 182.8 51 214.7 19.7c32-31.4 52.8-24.2 72.3 13.9 19.5 38 55.1 47.2 88.4 61.2 22.1 9.3 22.1 1296 0 3860.2H0V129z' fill='%23181F2A' fill-rule='evenodd'/%3E%3C/svg%3E");
 
@@ -18,7 +20,8 @@
 }
 
 
-.light:checked ~ .container {
+.light:checked ~ .container,
+.light:checked ~ .popup  {
   --color-primary-1: #{$color-primary-light-white-1};
   --color-primary-2: #{$color-primary-light-white-2};
   --color-primary-3: #{$color-primary-light-white-3};
@@ -31,6 +34,8 @@
   --gradient-svg: url(#gradient-call-to-action-2);
 
   --color-input-border: #{$color-accent-blue-d};
+
+  --color-form-out-bg: rgba(0, 0, 0, .4);
 
 
   --bg-img-mobile: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='375' height='141'%3E%3Cpath d='M0 129c22.7-1.7 44-15.8 64-42.1 30-39.6 23.5-54.1 73.2-40.6C187 60 182.8 51 214.7 19.7c32-31.4 52.8-24.2 72.3 13.9 19.5 38 55.1 47.2 88.4 61.2 22.1 9.3 22.1 1296 0 3860.2H0V129z' fill='%23E8E8E8' fill-rule='evenodd'/%3E%3C/svg%3E");
