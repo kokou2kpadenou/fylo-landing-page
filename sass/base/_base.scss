@@ -7,7 +7,10 @@
 }
 
 html {
-  font-size: 43.75%;
+  font-size: 43.75%; // 43.75% * 16px = 7px = 1rem => 14px = 2rem
+  @supports (scroll-behavior: smooth) {
+    scroll-behavior: smooth;
+  }
 }
 
 body {

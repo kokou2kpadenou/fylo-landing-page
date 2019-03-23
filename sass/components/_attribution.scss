@@ -1,8 +1,8 @@
+// attribution in bottom of page styling
 .attribution {
   padding-bottom: 4rem;
   &__content {
     font-size: 11px;
     text-align: center;
-    @extend %extra-link-animation;
   }
 }

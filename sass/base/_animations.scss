@@ -4,14 +4,23 @@
     text-decoration: none;
     color: var(--color-neutral);
   }
-  &:hover, &:active {
-    @include text-color-gradient();
+
+  &--normal {
+    &:hover, &:active {
+      @include text-color-gradient();
+    }
   }
 
+  &--deep {
+    &:hover .link__animation-text, &:active .link__animation-text {
+      @include text-color-gradient();
+    }
+  }
   &:hover svg, &:active svg{
     fill: var(--gradient-svg);
   }
 }
+
 
 // Animate the fylo's logo when the mouse hover the menu
 nav {
@@ -29,17 +38,16 @@ nav {
 }
 
 // Attribution's and signin link styling
-%extra-link-animation {
-  a {
-    transition: color .5s;
-    &:link,
-    &:visited {
-      @include text-color-gradient();
-      text-decoration: none;
-    }
-    &:hover,
-    &:active {
-      color: var(--color-neutral);
-    }
+.extra-link-animation {
+  text-decoration: none;
+  transition: color .5s;
+
+  &:link .extra-link-animation-text,
+  &:visited .extra-link-animation-text {
+    @include text-color-gradient();
+  }
+  &:hover .extra-link-animation-text,
+  &:active .extra-link-animation-text {
+    color: var(--color-neutral);
   }
 }

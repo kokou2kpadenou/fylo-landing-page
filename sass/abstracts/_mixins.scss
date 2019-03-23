@@ -3,6 +3,8 @@
   background-image: var(--gradient);
   -webkit-background-clip: text;
   background-clip: text;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
   color: transparent;
 }
 

@@ -2,10 +2,20 @@
   text-decoration: none;
   color: var(--color-neutral); }
 
-.link__animation:hover, .link__animation:active {
+.link__animation--normal:hover, .link__animation--normal:active {
   background-image: var(--gradient);
   -webkit-background-clip: text;
   background-clip: text;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  color: transparent; }
+
+.link__animation--deep:hover .link__animation-text, .link__animation--deep:active .link__animation-text {
+  background-image: var(--gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
   color: transparent; }
 
 .link__animation:hover svg, .link__animation:active svg {
@@ -20,15 +30,19 @@ nav:hover + div .logo .logo__top {
 nav:hover + div .logo__bottom {
   transform: translateY(5px); }
 
-.attribution__content a, .popup a {
+.extra-link-animation {
+  text-decoration: none;
   transition: color .5s; }
-  .attribution__content a:link, .popup a:link, .attribution__content a:visited, .popup a:visited {
+  .extra-link-animation:link .extra-link-animation-text,
+  .extra-link-animation:visited .extra-link-animation-text {
     background-image: var(--gradient);
     -webkit-background-clip: text;
     background-clip: text;
-    color: transparent;
-    text-decoration: none; }
-  .attribution__content a:hover, .popup a:hover, .attribution__content a:active, .popup a:active {
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    color: transparent; }
+  .extra-link-animation:hover .extra-link-animation-text,
+  .extra-link-animation:active .extra-link-animation-text {
     color: var(--color-neutral); }
 
 *,
@@ -40,6 +54,9 @@ nav:hover + div .logo__bottom {
 
 html {
   font-size: 43.75%; }
+  @supports (scroll-behavior: smooth) {
+    html {
+      scroll-behavior: smooth; } }
 
 body {
   box-sizing: border-box; }
@@ -257,6 +274,17 @@ body {
       .list__label {
         max-width: 43rem; } }
 
+.btn:hover, .btn:active {
+  background-color: transparent;
+  background-image: none; }
+  .btn:hover .btn-text, .btn:active .btn-text {
+    background-image: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    color: transparent; }
+
 .btn {
   font-family: "Raleway", sans-serif;
   font-weight: bold;
@@ -271,17 +299,9 @@ body {
   cursor: pointer;
   transition: all .5s; }
   .btn:hover {
-    background-image: var(--gradient);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
     transform: translateY(-6px);
     box-shadow: 1rem 1rem 1rem 2px rgba(0, 0, 0, 0.5); }
   .btn:active {
-    background-image: var(--gradient);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
     transform: translateY(-3px);
     box-shadow: 0.5rem 0.5rem 0.5rem 1px rgba(0, 0, 0, 0.5); }
 
@@ -295,8 +315,8 @@ body {
     border: 2px solid red;
     box-shadow: 0 0 5px #d45252; }
   .inputs:valid {
-    border-color: var(--color-accent-light);
-    box-shadow: 0 0 5px var(--color-accent-light); }
+    border-color: var(--color-accent-dark);
+    box-shadow: 0 0 5px var(--color-accent-dark); }
 
 .theme__radio--light:checked ~ .container .footer .theme__icon--light, .theme__radio--dark:checked ~ .container .footer .theme__icon--dark {
   border: 2px solid #65e2d9;
@@ -353,10 +373,7 @@ body {
   display: none;
   background-color: var(--color-form-out-bg);
   color: var(--color-neutral);
-  z-index: 30;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.5s; }
+  z-index: 30; }
   .popup__content {
     position: relative;
     text-align: center;
@@ -390,9 +407,7 @@ body {
   .popup:target {
     display: flex;
     justify-content: center;
-    align-items: center;
-    opacity: 1;
-    visibility: visible; }
+    align-items: center; }
 
 .container {
   display: grid;

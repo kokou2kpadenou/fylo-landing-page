@@ -1,4 +1,8 @@
-// Colors
+// -----------------------------------------------------------------
+//                              Colors
+// -----------------------------------------------------------------
+
+// dark
 $color-primary-dark-blue-1: hsl(217, 28%, 15%); // intro and email sign up background
 $color-primary-dark-blue-2: hsl(218, 28%, 13%); // main background
 $color-primary-dark-blue-3: hsl(216, 53%, 9%); // footer background
@@ -10,27 +14,29 @@ $color-accent-cyan: hsl(176, 68%, 64%); // inside call-to-action gradient
 $color-accent-blue: hsl(198, 60%, 50%); // inside call-to-action gradient
 $gradient-call-to-action: linear-gradient(to right, $color-accent-cyan, $color-accent-blue);
 
+
+// light
 $color-primary-light-white-1: hsl(0, 0%, 100%); // intro and email sign up background
 $color-primary-light-white-2: hsl(0, 0%, 91%); // main background
 $color-primary-light-white-3: hsl(0, 0%, 78%); // footer background
 $color-primary-light-white-4: hsl(0, 0%, 87%); // testimonials background
 
 $color-neutral-black: hsl(0, 0%, 20%); // black color
-// #2cd7cb
+
 $color-accent-cyan-d: hsl(0, 100%, 50%); // inside call-to-action gradient
 $color-accent-blue-d: hsl(198, 60%, 37%); // inside call-to-action gradient
 $gradient-call-to-action-d: linear-gradient(to right, $color-accent-cyan-d, $color-accent-blue-d);
 
 
-
-
-
+// miscellaneous
 $color-shadow-lite-black: rgba(0, 0, 0, 0.5); // shadow
-
 $color-facebook: hsl(221, 44%, 41%); // facebook color
 $color-twitter: hsl(206, 82%, 63%); // twitter color
 $color-instagram: hsl(207, 34%, 48%); // instagram color
 
+// -----------------------------------------------------------------
+//                              fonts
+// -----------------------------------------------------------------
 
 $font-family-heading: 'Raleway', sans-serif; // Headings, Call-to-actions, Header Navigation - font
 $font-family-body: 'Open Sans', sans-serif; // Body - font

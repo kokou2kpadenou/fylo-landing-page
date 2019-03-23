@@ -1,4 +1,4 @@
-// email input styling
+// input styling
 .inputs {
   border-radius: 100rem;
   border: 2px solid var(--color-input-border);
@@ -12,8 +12,8 @@
   }
 
   &:valid {
-    border-color: var(--color-accent-light);
-    box-shadow: 0 0 5px var(--color-accent-light);
+    border-color: var(--color-accent-dark);
+    box-shadow: 0 0 5px var(--color-accent-dark);
   }
 
 }
