@@ -13,7 +13,8 @@
     "compress:css": "node-sass css/style.prefix.css build/css/styles.css --output-style compressed",
     "copy:html": "html-minifier --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype index.html -o build/index.html",
     "copy:assets": "mkdir build/images; cp -t build/images ./images/profile*.jpg ./images/illustration*.png ./images/favicon*.png",
-    "build": "npm-run-all compile:sass prefix:css compress:css copy:html copy:assets"
+    "copy:js": "uglifyjs --compress --mangle -o ./build/js/script.js -- ./js/script.js ",
+    "build": "npm-run-all compile:sass prefix:css compress:css copy:html copy:assets copy:js"
   },
   "repository": {
     "type": "git",
@@ -30,6 +31,7 @@
     "html-minifier": "^3.5.21",
     "node-sass": "^4.11.0",
     "npm-run-all": "^4.1.5",
-    "postcss-cli": "^6.1.2"
+    "postcss-cli": "^6.1.2",
+    "uglify-js": "^3.5.2"
   }
 }
