@@ -3,7 +3,7 @@
   fill: var(--color-neutral);
 
   &:hover {
-    fill: var(--gradient-svg);
+    fill: url(#gradient-call-to-action);
     & .logo__top {
       transform: translateY(-5px);
     }

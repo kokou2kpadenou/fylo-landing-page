@@ -1,7 +1,7 @@
 // Theme selection buttons
 %checked-state {
-  border: 2px solid $color-accent-cyan;
-  color: $color-accent-cyan;
+  border: 2px solid $color-accent-dark--light;
+  color: $color-accent-dark--light;
 }
 
 .theme {
@@ -56,7 +56,7 @@
       background-color: $color-primary-dark-blue-3;
     }
     &:hover {
-      border: 2px solid $color-accent-blue;
+      border: 2px solid $color-accent-dark--dark;
     }
   }
 

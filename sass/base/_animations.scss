@@ -17,7 +17,7 @@
     }
   }
   &:hover svg, &:active svg{
-    fill: var(--gradient-svg);
+    fill: url(#gradient-call-to-action);
   }
 }
 
@@ -25,7 +25,7 @@
 // Animate the fylo's logo when the mouse hover the menu
 nav {
   &:hover + div .logo {
-    fill: var(--gradient-svg);
+    fill: url(#gradient-call-to-action);
   }
 
   &:hover + div .logo .logo__top {

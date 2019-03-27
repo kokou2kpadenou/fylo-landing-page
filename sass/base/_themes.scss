@@ -1,55 +1,86 @@
+
+.container, .popup { --gradient: linear-gradient(to right, var(--color-accent-light), var(--color-accent-dark)); }
+
+
 // -----------------------------------------------------------------
 //                             dark
 // -----------------------------------------------------------------
-.dark:checked ~ .container,
-.dark:checked ~ .popup {
+
+%var-dark-group1 {
+  --color-accent-light: #{$color-accent-dark--light};
+  --color-accent-dark: #{$color-accent-dark--dark};
+}
+
+%var-dark-group2 {
   --color-primary-1: #{$color-primary-dark-blue-1};
   --color-primary-2: #{$color-primary-dark-blue-2};
   --color-primary-3: #{$color-primary-dark-blue-3};
   --color-primary-4: #{$color-primary-dark-blue-4};
   --color-neutral: #{$color-neutral-white};
-
-  --color-accent-light: #{$color-accent-cyan};
-  --color-accent-dark: #{$color-accent-blue};
-  --gradient: #{$gradient-call-to-action};
-  --gradient-svg: url(#gradient-call-to-action-1);
-
   --color-input-border: transparent;
-  --color-form-out-bg: rgba(255, 255, 255, .2);
-
-  --bg-img-mobile: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='375' height='141'%3E%3Cpath d='M0 129c22.7-1.7 44-15.8 64-42.1 30-39.6 23.5-54.1 73.2-40.6C187 60 182.8 51 214.7 19.7c32-31.4 52.8-24.2 72.3 13.9 19.5 38 55.1 47.2 88.4 61.2 22.1 9.3 22.1 1296 0 3860.2H0V129z' fill='%23181F2A' fill-rule='evenodd'/%3E%3C/svg%3E");
-
-  --bg-img-desktop: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1440' height='449'%3E%3Cpath d='M0 414c90.8-5.4 176.2-50.4 256.1-135C376 151.8 350.1 105.1 549 148.6c199 43.5 182 15 310-85.6 128-100.5 211-77.5 289 44.7s151 162.9 284 207.8c88.7 29.9 92 848.3 10 2455H0V414z' fill='%23181F2A' fill-rule='evenodd'/%3E%3C/svg%3E");
-
-
-  --bg--quotes: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14.6 11.9' height='45' width='55'%3E%3Cg fill='%2362e0d9' stroke='%2362e0d9' stroke-width='.3'%3E%3Cpath d='M3.2 6.3h2.4v5.2H.4V6.3c.4-2.8 1.7-4.5 3.2-6L5.3 2c-1 1.3-2 2.7-2 4.4zM11.7 6.3H14v5.2H9V6.3c.4-2.8 1.7-4.5 3.1-6L13.8 2c-1 1.3-2 2.7-2.1 4.4z' stroke-width='.219255'/%3E%3C/g%3E%3C/svg%3E");
-
 }
+
+.dark:checked {
+  & ~ .container {
+    @extend %var-dark-group1;
+    @extend %var-dark-group2;
+
+    --bg-img-mobile: url("#{background-image("curvy-mobile", "#{$color-primary-dark-blue-2}")}");
+
+    --bg-img-desktop: url("#{background-image("curvy-desktop", "#{$color-primary-dark-blue-2}")}");
+
+    --bg--quotes: url("#{background-image("quotes", "#{$color-accent-dark--light}")}");
+  }
+
+  & ~ .popup {
+    @extend %var-dark-group1;
+    @extend %var-dark-group2;
+    --color-form-out-bg: rgba(255, 255, 255, .2);
+  }
+
+  & ~ .svg-group {
+    @extend %var-dark-group1;
+  }
+}
+
 
 // -----------------------------------------------------------------
 //                              light
 // -----------------------------------------------------------------
-.light:checked ~ .container,
-.light:checked ~ .popup  {
+%var-light-group1 {
+  --color-accent-light: #{$color-accent-light-light};
+  --color-accent-dark: #{$color-accent-light-dark};
+}
+
+%var-light-group2 {
   --color-primary-1: #{$color-primary-light-white-1};
   --color-primary-2: #{$color-primary-light-white-2};
   --color-primary-3: #{$color-primary-light-white-3};
   --color-primary-4: #{$color-primary-light-white-4};
   --color-neutral: #{$color-neutral-black};
-
-  --color-accent-light: #{$color-accent-cyan-d};
-  --color-accent-dark: #{$color-accent-blue-d};
-  --gradient: #{$gradient-call-to-action-d};
-  --gradient-svg: url(#gradient-call-to-action-2);
-
-  --color-input-border: #{$color-accent-blue-d};
-
-  --color-form-out-bg: rgba(0, 0, 0, .4);
+  --color-input-border: var(--color-accent-dark);
+}
 
 
-  --bg-img-mobile: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='375' height='141'%3E%3Cpath d='M0 129c22.7-1.7 44-15.8 64-42.1 30-39.6 23.5-54.1 73.2-40.6C187 60 182.8 51 214.7 19.7c32-31.4 52.8-24.2 72.3 13.9 19.5 38 55.1 47.2 88.4 61.2 22.1 9.3 22.1 1296 0 3860.2H0V129z' fill='%23E8E8E8' fill-rule='evenodd'/%3E%3C/svg%3E");
+.light:checked {
+  & ~ .container {
+    @extend %var-light-group1;
+    @extend %var-light-group2;
 
-  --bg-img-desktop: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1440' height='449'%3E%3Cpath d='M0 414c90.8-5.4 176.2-50.4 256.1-135C376 151.8 350.1 105.1 549 148.6c199 43.5 182 15 310-85.6 128-100.5 211-77.5 289 44.7s151 162.9 284 207.8c88.7 29.9 92 848.3 10 2455H0V414z' fill='%23E8E8E8' fill-rule='evenodd'/%3E%3C/svg%3E");
+    --bg-img-mobile: url("#{background-image("curvy-mobile", "#{$color-primary-light-white-2}")}");
 
-  --bg--quotes: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14.6 11.9' height='45' width='55'%3E%3Cg fill='%23ff0000' stroke='%23ff0000' stroke-width='.3'%3E%3Cpath d='M3.2 6.3h2.4v5.2H.4V6.3c.4-2.8 1.7-4.5 3.2-6L5.3 2c-1 1.3-2 2.7-2 4.4zM11.7 6.3H14v5.2H9V6.3c.4-2.8 1.7-4.5 3.1-6L13.8 2c-1 1.3-2 2.7-2.1 4.4z' stroke-width='.219255'/%3E%3C/g%3E%3C/svg%3E");
+    --bg-img-desktop: url("#{background-image("curvy-desktop", "#{$color-primary-light-white-2}")}");
+
+    --bg--quotes: url("#{background-image("quotes", "#{$color-accent-light-light}")}");
+  }
+
+  & ~ .popup {
+    @extend %var-light-group1;
+    @extend %var-light-group2;
+    --color-form-out-bg: rgba(0, 0, 0, .4);
+  }
+
+  & ~ .svg-group {
+    @extend %var-light-group1;
+  }
 }
