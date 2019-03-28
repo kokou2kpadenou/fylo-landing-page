@@ -3,6 +3,7 @@
   grid-column: signup-c-start / signup-c-end;
   grid-row: intro-start / intro-end;
   text-align: center;
+  z-index: 3;
 
   &__down {
     margin: 4rem 2rem 0 2rem;
@@ -14,12 +15,22 @@
   &__background {
     grid-column: ml-start / mr-end;
     grid-row: intro-bg-start / intro-bg-end;
-    background-image: var(--bg-img-mobile);
-    @include responsive(tablet-land) { background-image: var(--bg-img-desktop); };
     background-color: var(--color-primary-1);
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-size: contain;
+    position: relative;
+    // This trick fix the bug on chrome IOS and safari IOS (iphone only)
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: var(--bg-img-mobile);
+      @include responsive(tablet-land) { background-image: var(--bg-img-desktop); };
+      background-position: bottom;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
   }
 
   &__img {
