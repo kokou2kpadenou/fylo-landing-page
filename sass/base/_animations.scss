@@ -51,3 +51,85 @@ nav {
     color: var(--color-neutral);
   }
 }
+
+
+
+
+
+
+.animated {
+  &--moveInBottom {
+    animation: moveInBottom .5s ease-out 2s;
+    animation-fill-mode: backwards;
+  }
+  &--moveInTop {
+    animation: moveInTop 1.5s ease-out 1s;
+    animation-fill-mode: backwards;
+  }
+  &--moveInRight {
+    animation: moveInRight 1s ease-out;
+  }
+  &--moveInLeft {
+    animation: moveInLeft 1s ease-out;
+  }
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20rem);
+  }
+  80% {
+    transform: translateX(2rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(20rem);
+  }
+  80% {
+    opacity: .6;
+    transform: translateX(-2rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes moveInTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-30rem);
+  }
+  50% {
+    opacity: .3;
+  }
+  70% {
+    opacity: .5;
+  }
+  90% {
+    opacity: .7;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
