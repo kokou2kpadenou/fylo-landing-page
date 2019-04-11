@@ -20,11 +20,11 @@
   // bg-curvy-desktop
   $color: str-replace($color, '#', '%23');
   @if $bg == 'curvy-desktop' {
-    @return "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1440' height='449'%3E%3Cpath d='M0 414c90.8-5.4 176.2-50.4 256.1-135C376 151.8 350.1 105.1 549 148.6c199 43.5 182 15 310-85.6 128-100.5 211-77.5 289 44.7s151 162.9 284 207.8c88.7 29.9 92 848.3 10 2455H0V414z' fill='#{$color}' fill-rule='evenodd'/%3E%3C/svg%3E";
+    @return "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 449' width='1440' height='449'%3E%3Cpath d='M0 414c90.8-5.4 176.2-50.4 256.1-135C376 151.8 350.1 105.1 549 148.6c199 43.5 182 15 310-85.6 128-100.5 211-77.5 289 44.7s151 162.9 284 207.8c88.7 29.9 92 848.3 10 2455H0V414z' fill='#{$color}' fill-rule='evenodd'/%3E%3C/svg%3E";
   }
   // bg-curvy-mobile
   @if $bg == 'curvy-mobile' {
-    @return "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='375' height='141'%3E%3Cpath d='M0 129c22.7-1.7 44-15.8 64-42.1 30-39.6 23.5-54.1 73.2-40.6C187 60 182.8 51 214.7 19.7c32-31.4 52.8-24.2 72.3 13.9 19.5 38 55.1 47.2 88.4 61.2 22.1 9.3 22.1 1296 0 3860.2H0V129z' fill='#{$color}' fill-rule='evenodd'/%3E%3C/svg%3E";
+    @return "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 375 141' width='375' height='141'%3E%3Cpath d='M0 129c22.7-1.7 44-15.8 64-42.1 30-39.6 23.5-54.1 73.2-40.6C187 60 182.8 51 214.7 19.7c32-31.4 52.8-24.2 72.3 13.9 19.5 38 55.1 47.2 88.4 61.2 22.1 9.3 22.1 1296 0 3860.2H0V129z' fill='#{$color}' fill-rule='evenodd'/%3E%3C/svg%3E";
   }
   // bg-quotes
   @if $bg == 'quotes' {
