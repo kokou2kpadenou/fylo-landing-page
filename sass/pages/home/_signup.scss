@@ -7,7 +7,9 @@
   text-align: center;
   border-radius: 1rem;
   box-shadow: 1rem 1rem 1rem 2px $color-shadow-lite-black;
-  z-index: 3;
+  position: relative;
+  z-index: 1;
+  
   & p {
     max-width: 96rem;
     margin: 0 auto;

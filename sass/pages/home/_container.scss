@@ -10,6 +10,8 @@
 
 .container {
   display: grid;
+  position: relative;
+  z-index: 0;
   background-color: var(--color-primary-2);
   color: var(--color-neutral);
   // Control intro background image height
@@ -35,6 +37,8 @@
     grid-column: ml-start / mr-end;
     grid-row: header-start / header-end;
     background-color: var(--color-primary-1);
+    position: relative;
+    z-index: -1;
   }
 
   // Footer background and half side background of sign up
@@ -43,5 +47,7 @@
     grid-column: ml-start / mr-end;
     grid-row: footer-bg-start / footer-bg-end;
     background-color: var(--color-primary-3);
+    position: relative;
+    z-index: -1;
   }
 }
