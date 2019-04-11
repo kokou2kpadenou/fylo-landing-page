@@ -42,21 +42,32 @@ nav {
   text-decoration: none;
   transition: color .5s;
 
-  &:link .extra-link-animation-text,
-  &:visited .extra-link-animation-text {
-    @include text-color-gradient();
+  &:link,
+  &:visited {
+    .extra-link-animation__text {
+      @include text-color-gradient();
+    }
+
+    .extra-link-animation__icon {
+      fill: url(#gradient-call-to-action);
+    }
   }
-  &:hover .extra-link-animation-text,
-  &:active .extra-link-animation-text {
-    color: var(--color-neutral);
+
+  &:hover,
+  &:active {
+    .extra-link-animation__text {
+      color: var(--color-neutral);
+    }
+    .extra-link-animation__icon {
+      fill: var(--color-neutral);
+    }
+    &::before {
+      width: 0;
+    }
   }
 }
 
-
-
-
-
-
+// Intro animation
 .animated {
   &--moveInBottom {
     animation: moveInBottom .5s ease-out 2s;
@@ -88,6 +99,7 @@ nav {
   }
 }
 
+
 @keyframes moveInRight {
   0% {
     opacity: 0;
@@ -103,6 +115,7 @@ nav {
   }
 }
 
+
 @keyframes moveInBottom {
   0% {
     opacity: 0;
@@ -113,6 +126,7 @@ nav {
     transform: translateY(0);
   }
 }
+
 
 @keyframes moveInTop {
   0% {
