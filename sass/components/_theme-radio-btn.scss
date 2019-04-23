@@ -8,11 +8,11 @@
   text-align: center;
   margin: 0 auto 4rem auto;
   padding: 2rem 0 1rem 0;
-  color: #222;
+  color: var(--color-neutral);
   max-width: 35rem;
   border-radius: .9rem;
   box-shadow: 1rem 1rem 1rem 2px $color-shadow-lite-black;
-  background-color: $color-neutral-white;
+  background-color: var(--color-primary-1);
 
 
   &__radio {
