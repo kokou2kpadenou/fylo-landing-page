@@ -43,7 +43,8 @@ nav:hover + div .logo__bottom {
   .extra-link-animation:link .extra-link-animation__icon, .extra-link-animation:visited .extra-link-animation__icon {
     fill: url(#gradient-call-to-action); }
   .extra-link-animation:hover .extra-link-animation__text, .extra-link-animation:active .extra-link-animation__text {
-    color: var(--color-neutral); }
+    color: var(--color-neutral);
+    background-image: none; }
   .extra-link-animation:hover .extra-link-animation__icon, .extra-link-animation:active .extra-link-animation__icon {
     fill: var(--color-neutral); }
   .extra-link-animation:hover::before, .extra-link-animation:active::before {
@@ -411,11 +412,11 @@ body {
   text-align: center;
   margin: 0 auto 4rem auto;
   padding: 2rem 0 1rem 0;
-  color: #222;
+  color: var(--color-neutral);
   max-width: 35rem;
   border-radius: .9rem;
   box-shadow: 1rem 1rem 1rem 2px rgba(0, 0, 0, 0.5);
-  background-color: white; }
+  background-color: var(--color-primary-1); }
   .theme__radio {
     display: none; }
   .theme__bg {

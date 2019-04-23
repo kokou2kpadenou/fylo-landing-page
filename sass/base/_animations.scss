@@ -57,6 +57,8 @@ nav {
   &:active {
     .extra-link-animation__text {
       color: var(--color-neutral);
+      background-image: none;
+      
     }
     .extra-link-animation__icon {
       fill: var(--color-neutral);
