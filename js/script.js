@@ -1,6 +1,7 @@
 onload = start;
 
 var themeLight = document.getElementById('theme-light');
+var themeDark = document.getElementById('theme-dark');
 var theme = document.getElementsByClassName('theme__radio');
 var popup = document.getElementsByClassName('popup');
 
@@ -14,10 +15,12 @@ function start() {
       defaultTheme = 'dark';
     }
   }
-  // change the theme to light if light theme was saved?
-  // remenber than the dark is set as default in the html
+
+  // Set the theme when load
   if (defaultTheme === 'light') {
     themeLight.setAttribute('checked', true);
+  } else {
+    themeDark.setAttribute('checked', true);
   }
 }
 
@@ -38,10 +41,8 @@ for (var j=0; j < theme.length; j++) {
 	theme[j].addEventListener('click', switchTheme);
 }
 
-
 function switchTheme(e) {
   if ('localStorage' in window) {
-    console.log(this.getAttribute('value'));
     localStorage.setItem('fyloTheme', this.getAttribute('value'));
   }
 }
