@@ -6,12 +6,9 @@
 //                             dark
 // -----------------------------------------------------------------
 
-%var-dark-group1 {
+%var-dark {
   --color-accent-light: #{$color-accent-dark--light};
   --color-accent-dark: #{$color-accent-dark--dark};
-}
-
-%var-dark-group2 {
   --color-primary-1: #{$color-primary-dark-blue-1};
   --color-primary-2: #{$color-primary-dark-blue-2};
   --color-primary-3: #{$color-primary-dark-blue-3};
@@ -22,37 +19,31 @@
 
 .dark:checked {
   & ~ .container {
-    @extend %var-dark-group1;
-    @extend %var-dark-group2;
+    @extend %var-dark;
 
+    --gradient-icons: url(#gradient-dark);
     --bg-img-mobile: url("#{background-image("curvy-mobile", "#{$color-primary-dark-blue-2}")}");
 
     --bg-img-desktop: url("#{background-image("curvy-desktop", "#{$color-primary-dark-blue-2}")}");
 
     --bg--quotes: url("#{background-image("quotes", "#{$color-accent-dark--light}")}");
+
   }
 
   & ~ .popup {
-    @extend %var-dark-group1;
-    @extend %var-dark-group2;
+    @extend %var-dark;
     --color-form-out-bg: rgba(255, 255, 255, .2);
   }
 
-  & ~ .svg-group {
-    @extend %var-dark-group1;
-  }
 }
 
 
 // -----------------------------------------------------------------
 //                              light
 // -----------------------------------------------------------------
-%var-light-group1 {
+%var-light {
   --color-accent-light: #{$color-accent-light-light};
   --color-accent-dark: #{$color-accent-light-dark};
-}
-
-%var-light-group2 {
   --color-primary-1: #{$color-primary-light-white-1};
   --color-primary-2: #{$color-primary-light-white-2};
   --color-primary-3: #{$color-primary-light-white-3};
@@ -64,8 +55,9 @@
 
 .light:checked {
   & ~ .container {
-    @extend %var-light-group1;
-    @extend %var-light-group2;
+    @extend %var-light;
+
+    --gradient-icons: url(#gradient-light);
 
     --bg-img-mobile: url("#{background-image("curvy-mobile", "#{$color-primary-light-white-2}")}");
 
@@ -75,12 +67,9 @@
   }
 
   & ~ .popup {
-    @extend %var-light-group1;
-    @extend %var-light-group2;
+    @extend %var-light;
+
     --color-form-out-bg: rgba(0, 0, 0, .4);
   }
 
-  & ~ .svg-group {
-    @extend %var-light-group1;
-  }
 }

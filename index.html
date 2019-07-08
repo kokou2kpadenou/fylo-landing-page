@@ -34,7 +34,23 @@
       <div>
         <a href="#" aria-label="Fylo logo">
           <!-- Changed little bit the svg structure of original logo (the logo remain same) by adding more path. So the logo can be animated  -->
-          <svg class="header__img logo" height="52" width="176" viewBox="0 0 176 52">
+          <svg class="header__img logo" height="52" width="176" viewBox="0 0 176 52" xmlns='http://www.w3.org/2000/svg'>
+            <!-- linear gradient of logo when hovered -->
+            <defs>
+              <!-- <linearGradient id="gradient-call-to-action">
+                <stop offset="0%" style="stop-color: var(--color-accent-light)" />
+                <stop offset="100%" style="stop-color: var(--color-accent-dark)" />
+              </linearGradient> -->
+
+              <linearGradient id="gradient-dark">
+                <stop offset="0%" style="stop-color: #65e2d9" />
+                <stop offset="100%" style="stop-color: 	#339ecc" />
+              </linearGradient>
+              <linearGradient id="gradient-light">
+                <stop offset="0%" style="stop-color: 	#ff0000" />
+                <stop offset="100%" style="stop-color: 	#267597" />
+              </linearGradient>
+            </defs>
             <path class="logo__top" d="M29.754 2.607L0 16.371v.129l29.754 13.764 29.86-13.81v-.036zm.002 5.028l19.03 8.8-19.032 8.801-19.027-8.8z"/>
             <path class="logo__middle" d="M29.754 35.61L0 22.052v5.014l29.754 13.59L59.613 27.02v-5.015z"/>
             <path class="logo__bottom" d="M29.754 45.78L0 32.22v5.015l29.754 13.591L59.613 37.19v-5.014z"/>
@@ -360,15 +376,9 @@
   </div>
 
   <!-- All icons  -->
-  <svg class="svg-group" aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;">
+  <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;">
 
     <defs>
-      <!-- linear gradient of logo when hovered -->
-      <linearGradient id="gradient-call-to-action" x2="1" y2="1">
-        <stop offset="0%" style="stop-color: var(--color-accent-light)" />
-        <stop offset="100%" style="stop-color: var(--color-accent-dark)" />
-      </linearGradient>
-
       <symbol id="icon-check" viewBox="0 0 20 20">
         <path d="M8.294 16.998c-0.435 0-0.847-0.203-1.111-0.553l-3.573-4.721c-0.465-0.613-0.344-1.486 0.27-1.951 0.615-0.467 1.488-0.344 1.953 0.27l2.351 3.104 5.911-9.492c0.407-0.652 1.267-0.852 1.921-0.445s0.854 1.266 0.446 1.92l-6.984 11.21c-0.242 0.391-0.661 0.635-1.12 0.656-0.022 0.002-0.042 0.002-0.064 0.002z"></path>
       </symbol>
