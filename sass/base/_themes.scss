@@ -15,13 +15,13 @@
   --color-primary-4: #{$color-primary-dark-blue-4};
   --color-neutral: #{$color-neutral-white};
   --color-input-border: transparent;
+  --gradient-icons: url(#gradient-dark);
 }
 
 .dark:checked {
   & ~ .container {
     @extend %var-dark;
 
-    --gradient-icons: url(#gradient-dark);
     --bg-img-mobile: url("#{background-image("curvy-mobile", "#{$color-primary-dark-blue-2}")}");
 
     --bg-img-desktop: url("#{background-image("curvy-desktop", "#{$color-primary-dark-blue-2}")}");
@@ -50,6 +50,7 @@
   --color-primary-4: #{$color-primary-light-white-4};
   --color-neutral: #{$color-neutral-black};
   --color-input-border: var(--color-accent-dark);
+  --gradient-icons: url(#gradient-light);
 }
 
 
@@ -57,7 +58,6 @@
   & ~ .container {
     @extend %var-light;
 
-    --gradient-icons: url(#gradient-light);
 
     --bg-img-mobile: url("#{background-image("curvy-mobile", "#{$color-primary-light-white-2}")}");
 
