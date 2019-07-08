@@ -27,7 +27,7 @@ function start() {
 // Close popup menu when click outside the popup
 function closePopup(e) {
   if (e.target.className === 'popup') {
-    window.location.hash = '#';
+    window.location.hash = '';
   }
 }
 
