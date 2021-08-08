@@ -27,11 +27,11 @@
   },
   "homepage": "https://github.com/kokou2kpadenou/fylo-landing-page#readme",
   "devDependencies": {
-    "autoprefixer": "^10.1.0",
+    "autoprefixer": "^10.3.1",
     "html-minifier": "^4.0.0",
-    "node-sass": "^5.0.0",
+    "node-sass": "^6.0.1",
     "npm-run-all": "^4.1.5",
     "postcss-cli": "^8.3.1",
-    "uglify-js": "^3.12.3"
+    "uglify-js": "^3.14.1"
   }
 }
